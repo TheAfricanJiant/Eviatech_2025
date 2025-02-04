@@ -1,7 +1,7 @@
 /******************************************************************
 * Project: ElviaTech National Robotics Competition Code Suit      *
 * -----                                                           *
-* Author: Asongna Brilan Nso, 2025                                *
+* Authors : Asongna Brilan Nso And Tambu Precious Takum,  2025                                *
 * -----                                                           *
 * Goal: Learn C++ & Robotics, and be the winner                   *
 *******************************************************************/
