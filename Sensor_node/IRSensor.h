@@ -9,7 +9,7 @@ class IRSensor : public Sensor{
         const uint8_t pin; 
     
     public: 
-        IRSensor(const uint8_t inpin) : pin(inpin){
+        IRSensor(const uint8_t inpin) : Sensor(SensorType::IR), pin(inpin) {
             pinMode(pin, INPUT); 
         }
 

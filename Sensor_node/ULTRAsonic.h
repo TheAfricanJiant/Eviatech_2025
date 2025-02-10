@@ -10,7 +10,7 @@ class Ultrasonic : public Sensor{
         const uint8_t echoPin;
 
     public:
-        Ultrasonic(uint8_t trig_, uint8_t echo_) : trigPin(trig_), echoPin(echo_){
+        Ultrasonic(uint8_t trig_, uint8_t echo_) :Sensor(SensorType::Ultrasonic),  trigPin(trig_), echoPin(echo_){
             pinMode(trigPin, OUTPUT); 
             pinMode(echoPin, INPUT);
         }

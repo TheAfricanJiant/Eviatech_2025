@@ -1,14 +1,15 @@
 /******************************************************************
-* Project: ElviaTech National Robotics Competition Code Suit      *
+* Project: Eviatech 2025 Competion                                *
 * -----                                                           *
-* Authors : Asongna Brilan Nso And Tambu Precious Takum,  2025                                *
+* Authors: Tambu Precious and Asogna Brilan 2025                  *                               *
 * -----                                                           *
-* Goal: Learn C++ & Robotics, and be the winner                   *
+* Goal: Config file with pin inclusion                            *
 *******************************************************************/
 
 //#pragma once
 #ifndef CONFIG_H
 #define CONFIG_H
+
 #include <Arduino.h>
 
 // Hardware configuration for Arduino nano running the new bootloader.
@@ -52,7 +53,8 @@ const float RADIANS_PER_DEGREE = 2 * PI / 360;
 const float DEGREES_PER_RADIAN = 360 / 2 * PI;
 
 //Program variables
-
+const int maxSpeed = 255;
+const int minSpeed = 110;
  #endif
 
 

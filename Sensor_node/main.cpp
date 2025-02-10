@@ -1,9 +1,9 @@
 /******************************************************************
-* Project: Jonh-Deo     *
+* Project: Eviatech 2025 Competion                                *
 * -----                                                           *
-* Author: Tambu Precious, 2025                                *
+* Authors: Tambu Precious and Asogna Brilan 2025                  *                               *
 * -----                                                           *
-* Goal: John-Deo                                                  *
+* Goal: A fast Summo Wrestling Robot                              *
 *******************************************************************/
 
 #include <Arduino.h>
@@ -11,9 +11,12 @@
 #include "ULTRAsonic.h"
 #include "Sensors.h"
 #include "config.h"
+#include "motors.h"
+
 
 Sensors sensors; 
-int values[5]; // Adjust according to number of sensors 
+int Ultrasonicsvalues[5]; // Adjust according to number of sensors
+int Irsensorvalues[5]; // IR 
 
 //IR sensors 
 IRSensor A0_(IR_0); 
@@ -27,14 +30,42 @@ Ultrasonic frontSonar(frontA_trig, frontA_echo);
 Ultrasonic backSonar(frontB_trig, frontB_echo);
 
 void setup(){
-    Serial.begin(9600); 
+    Serial.begin(9600);
+
+    // you can add sensors in any order, they will be classified and tracked for fast iteration during reads.
+    
     sensors.addSensor(&A0_); // parsing by refrence , to avoid creating copies
     sensors.addSensor(&A1_);
     sensors.addSensor(&A2_);
     sensors.addSensor(&A3_);
     sensors.addSensor(&A4_);
+    
+    sensors.addSensor(&frontSonar);
+    sensors.addSensor(&backSonar);
+   
+   // Initialize motors
+    motors.initMotorPins();
+ 
 }
 
 void loop(){
-    sensors.readAll(values, 5);
+    sensors.readAll(SensorType::IR, Irsensorvalues); // read all IR sensors and save it 
+    sensors.readAll(SensorType::Ultrasonic,  Ultrasonicsvalues); // read all ultrasonics
 }
+
+
+
+
+
+
+
+/***************************** ALGORITHM *************************************************
+*
+*
+*
+*
+*
+*
+*
+*
+*
