@@ -43,7 +43,7 @@
 
 - **Creator & Lead Developer:** **Tambu Precious Takum**
 - **LinkedIn Profile:** [linkedin.com/in/tambu-precious-29bb67217](https://www.linkedin.com/in/tambu-precious-29bb67217/)
-- **Organization:** Hardware Innovation Valley Community (HWIVC)
+- **Organization:** Hardware Innovation Valley Community [hwivc.org](hwivc.org)
 - **Competition:** Eviatech 2025 Robotics Competition
 
 ---
